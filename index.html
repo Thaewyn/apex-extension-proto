@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>ALGS Apex Twitch Extension</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="streamfake">
+        <div class="overlay">
+          <canvas id="gameMap" width="800px" height="800px"></canvas>
+          <div id="playerHud">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="resources">
+      <img src="assets/images/kingsCanyon.png" id="kcMap" />
+      <div class="player demo">
+        <div class="playerName">
+          Dummie
+        </div>
+        <div class="equipment">
+          <div class="weapons">
+            <div class="wep1">
+              P2020
+            </div>
+            <div class="wep2">
+              Mozambique
+            </div>
+          </div>
+          <div class="gear">
+            <div class="armor t1">shield</div>
+            <div class="helmet t2">helmet</div>
+            <div class="backpack t3">backpack</div>
+            <div class="kdshield t4">kd shield</div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="backpackT1" x="0px" y="0px" viewBox="0 0 37 37" style="enable-background:new 0 0 37 37;" xml:space="preserve">
+        <style type="text/css">
+          .st0{fill:#241C1C;}
+        </style>
+        <g>
+          <path class="st0" d="M29.7,5.5c-0.5,0-0.8-0.4-0.8-0.9V1.1c0-0.6,0.8-1,1.5-0.7l0.1,0c1.7,0.6,2.9,1.9,2.9,3.4v2.6   C32.5,6,31.3,5.6,29.7,5.5z"/>
+          <path class="st0" d="M7.3,5.5c0.5,0,0.8-0.4,0.8-0.9V1.1c0-0.6-0.8-1-1.5-0.7l-0.1,0C4.8,1,3.7,2.4,3.7,3.8v2.6   C4.5,6,5.7,5.6,7.3,5.5z"/>
+          <path class="st0" d="M13.4,5.3h10.2c1.2,0,2.3,0.4,3.2,0.8C27,6.2,27.3,6,27.3,5.7V2.4c0-0.9-0.7-1.6-1.6-1.6H11.3   c-0.9,0-1.6,0.7-1.6,1.6v3.3c0,0.3,0.3,0.5,0.6,0.4C11.1,5.7,12.3,5.3,13.4,5.3z"/>
+          <path class="st0" d="M23.6,6.1H13.4c-1.1,0-2.2,0.4-3,0.8C9.9,7.1,9.7,7.6,9.7,8v8.3c0,0.4,0.3,0.7,0.7,0.7h16.2   c0.4,0,0.7-0.3,0.7-0.7V8c0-0.5-0.3-0.9-0.7-1.1C25.8,6.5,24.7,6.1,23.6,6.1z"/>
+          <path class="st0" d="M11.6,18.7c0.1,0.3,0.2,0.6,0.1,1c-0.5,2.8-0.6,5.1-0.4,6.2c0.2,1,0.3,1.9,7,1.9c6.7,0,6.8-0.9,7-1.9   c0.2-1.1,0-3.4-0.4-6.2c-0.1-0.4,0-0.7,0.1-1H11.6z"/>
+          <path class="st0" d="M18.4,31.8c-3.9,0-7.1-0.2-9.1-1.8v5.1c0,0.9,0.7,1.6,1.6,1.6h15.2c0.9,0,1.6-0.7,1.6-1.6v-5.3   C25.8,31.6,22.4,31.8,18.4,31.8z"/>
+          <path class="st0" d="M27.5,18.2l-0.8,0.2c-0.6,0.1-1,0.7-0.9,1.3c0.3,1.9,0.7,4.9,0.4,6.4c-0.3,1.4-0.5,2.6-7.8,2.6   s-7.5-1.1-7.8-2.6c-0.3-1.5,0.1-4.6,0.4-6.4c0.1-0.6-0.3-1.1-0.9-1.3l-0.8-0.2c-0.2,0-0.5,0.1-0.5,0.3c-0.2,1.4-0.9,5.6-0.5,8   C9,30.3,12.1,31,18.4,31s9.4-0.7,10.1-4.5c0.4-2.3-0.3-6.6-0.5-8C28,18.3,27.7,18.1,27.5,18.2z"/>
+          <path class="st0" d="M28.9,6.2v12.7c0.3,1.9,0.8,5.5,0.4,7.7c-0.1,0.5-0.2,1-0.4,1.4v7.6c0,0.6,0.8,1,1.5,0.7l0.1,0   c1.7-0.6,2.9-1.9,2.9-3.4V7.3C32.5,6.8,31.1,6.3,28.9,6.2z"/>
+          <path class="st0" d="M7.5,26.6c-0.4-2.4,0.2-6.5,0.5-8.2c0-0.1,0.1-0.2,0.1-0.3V6.2C5.9,6.3,4.5,6.8,3.7,7.3V33   c0,1.5,1.1,2.8,2.9,3.4l0.1,0c0.7,0.3,1.5-0.1,1.5-0.7v-7.2C7.9,27.9,7.6,27.3,7.5,26.6z"/>
+        </g>
+      </svg>
+    </div>
+    <script type="text/javascript" src="assets/scripts/payload1.js"></script>
+    <script type="text/javascript" src="assets/scripts/main.js"></script>
+  </body>
+</html>

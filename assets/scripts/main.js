@@ -12,12 +12,23 @@ let currentData;
 const circleRadius = 50;
 
 function getData() {
-  let json = payload1;
+  let json;
+  
+  if (tickCounter%3 == 0) {
+    json = payload1;
+  } else if (tickCounter%3 == 1) {
+    json = payload2;
+  } else {
+    json = payload3;
+  }
   return json;
 }
 
+let tickCounter = 0;
+
 function repaint() {
   //console.log("called repaint");
+  tickCounter++;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(zoneMap, 0, 0, 800, 800);
 
@@ -82,6 +93,7 @@ function clickHandler(e) {
   circlePosition.y = e.offsetY;
   isCircleActive = true;
   //repaint(); //don't want full repaint because of server calls, but we can draw the circle.
+  ctx.strokeStyle = "#dddddd";
   ctx.beginPath();
   ctx.arc(circlePosition.x, circlePosition.y, 50, 0, 2 * Math.PI);
   ctx.stroke();

@@ -1,4 +1,4 @@
-console.log("page loaded");
+//console.log("page loaded");
 
 const canvas = document.getElementById('gameMap');
 const ctx = canvas.getContext('2d');
@@ -10,6 +10,11 @@ let circlePosition = {x:0, y:0};
 let currentData;
 
 const circleRadius = 50;
+
+const helmetIconSvg = document.getElementById("helmetSvg");
+const armorIconSvg = document.getElementById("evoShieldSvg");
+const kdShieldSvg = document.getElementById("knockdownShieldSvg");
+const backpackSvg = document.getElementById("backpackT2");
 
 function getData() {
   let json;
@@ -147,15 +152,15 @@ function buildPlayerDiv(player) {
   weaponDiv.classList.add("weapons");
   equipDiv.appendChild(weaponDiv);
   let wep1div = document.createElement("div");
-  wep1div.classList.add("wep1");
-  let wep1Txt = document.createTextNode(player.weapon1);
-  wep1div.appendChild(wep1Txt);
+  wep1div.classList.add(player.weapon1);
+  //let wep1Txt = document.createTextNode(player.weapon1);
+  //wep1div.appendChild(wep1Txt);
   weaponDiv.appendChild(wep1div);
   let wep2div = document.createElement("div");
-  wep2div.classList.add("wep2");
+  wep2div.classList.add(player.weapon2);
   //wep2div.createTextNode(player.weapon2);
-  let wep2Txt = document.createTextNode(player.weapon2);
-  wep2div.appendChild(wep2Txt);
+  //let wep2Txt = document.createTextNode(player.weapon2);
+  //wep2div.appendChild(wep2Txt);
   weaponDiv.appendChild(wep2div);
   let gearDiv = document.createElement("div");
   gearDiv.classList.add("gear");
@@ -164,29 +169,30 @@ function buildPlayerDiv(player) {
   armorDiv.classList.add("armor");
   armorDiv.classList.add("t"+player.armorTier);
   //armorDiv.createTextNode("armor");
-  let armorTxt = document.createTextNode("armor");
-  armorDiv.appendChild(armorTxt);
+  //document.getElementsByClassName("player")[0].children[1].children[1].children[1].appendChild(helmetIconSvg.cloneNode(true))
+  //let armorTxt = document.createTextNode("armor");
+  armorDiv.appendChild(armorIconSvg.cloneNode(true));
   gearDiv.appendChild(armorDiv);
   let helmetDiv = document.createElement("div");
   helmetDiv.classList.add("helmet");
   helmetDiv.classList.add("t"+player.helmetTier);
   //helmetDiv.createTextNode("helmet");
-  let helmetTxt = document.createTextNode("helmet");
-  helmetDiv.appendChild(helmetTxt);
+  //let helmetTxt = document.createTextNode("helmet");
+  helmetDiv.appendChild(helmetIconSvg.cloneNode(true));
   gearDiv.appendChild(helmetDiv);
   let backpackDiv = document.createElement("div");
   backpackDiv.classList.add("backpack");
   backpackDiv.classList.add("t"+player.backpackTier);
   //backpackDiv.createTextNode("backpack");
-  let backpackTxt = document.createTextNode("backpack");
-  backpackDiv.appendChild(backpackTxt);
+  //let backpackTxt = document.createTextNode("backpack");
+  backpackDiv.appendChild(backpackSvg.cloneNode(true));
   gearDiv.appendChild(backpackDiv);
   let kdshieldDiv = document.createElement("div");
   kdshieldDiv.classList.add("kdshield");
   kdshieldDiv.classList.add("t"+player.kdShieldTier);
   //kdshieldDiv.createTextNode("kd shield");
-  let kdshieldTxt = document.createTextNode("kd shield");
-  kdshieldDiv.appendChild(kdshieldTxt);
+  //let kdshieldTxt = document.createTextNode("kd shield");
+  kdshieldDiv.appendChild(kdShieldSvg.cloneNode(true));
   gearDiv.appendChild(kdshieldDiv);
 
   playerDivContainer.appendChild(topDiv);

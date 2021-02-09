@@ -37,7 +37,7 @@
 .player {
   border: 1px solid black;
   background-color: rgba(200, 200, 200, 0.5);
-  width: 200px;
+  width: 210px;
   padding: 5px;
   margin: 10px;
 }
@@ -50,21 +50,37 @@
 .player .playerName {
   background-color: blue;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 15px;
 }
 
 .player .equipment {
-  background-color: red;
+  /*background-color: red;*/
   border: 1px solid black;
 }
 
 .player .weapons {
-  background-color: green;
+  background-color: rgba(200, 200, 200, 0.5);
   border: 1px solid grey;
+}
+
+.player .weapons > div {
+  /*border: 1px solid red;*/
+  height: 50px;
+  background-size:contain;
+  background-repeat: no-repeat;
 }
 
 .player .gear {
   background-color: #333;
-  border: 1px solid teal;
+  /*border: 1px solid teal;*/
+  display:flex;
+}
+
+.player .gear::after {
+  clear:both;
+  content:'';
+  display: table;
 }
 
 .player .gear .t1 {
@@ -81,4 +97,91 @@
 }
 .player .gear .t5 {
   background-color: red;
+}
+.gear > div {
+  flex:auto;
+  width: 38px;
+  height: 36px;
+  text-align:center;
+  float:left;
+}
+.gear > div > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.player .weapons .repeater {
+  background-image: url("../images/30-30_Repeater_Icon.png");
+}
+.player .weapons .alternator {
+  background-image: url("../images/Alternator_Icon.png");
+}
+.player .weapons .charge {
+  background-image: url("../images/Charge_Rifle_Icon.png");
+}
+.player .weapons .devo {
+  background-image: url("../images/Devotion_Icon.png");
+}
+.player .weapons .eva {
+  background-image: url("../images/Eva-8_Icon.png");
+}
+.player .weapons .flat {
+  background-image: url("../images/Flatline_Icon.png");
+}
+.player .weapons .scout {
+  background-image: url("../images/G7_Scout_Icon.png");
+}
+.player .weapons .havoc {
+  background-image: url("../images/Havoc_Icon.png");
+}
+.player .weapons .hemlock {
+  background-image: url("../images/Hemlok_Icon.png");
+}
+.player .weapons .krab {
+  background-image: url("../images/Kraber_Icon.png");
+}
+.player .weapons .lstar {
+  background-image: url("../images/L-Star_Icon.png");
+}
+.player .weapons .longbow {
+  background-image: url("../images/Longbow_Icon.png");
+}
+.player .weapons .mastiff {
+  background-image: url("../images/Mastiff_Icon.png");
+}
+.player .weapons .mozam {
+  background-image: url("../images/Mozambique_Icon.png");
+}
+.player .weapons .p20 {
+  background-image: url("../images/P2020_Icon.png");
+}
+.player .weapons .pk {
+  background-image: url("../images/Peacekeeper_Icon.png");
+}
+.player .weapons .prowler {
+  background-image: url("../images/Prowler_Icon.png");
+}
+.player .weapons .r9 {
+  background-image: url("../images/R-99_Icon.png");
+}
+.player .weapons .r3 {
+  background-image: url("../images/R-301_Icon.png");
+}
+.player .weapons .re45 {
+  background-image: url("../images/Re-45_Icon.png");
+}
+.player .weapons .sentinel {
+  background-image: url("../images/Sentinel_Icon.png");
+}
+.player .weapons .spitfire {
+  background-image: url("../images/Spitfire_Icon.png");
+}
+.player .weapons .tt {
+  background-image: url("../images/Triple_Take_Icon.png");
+}
+.player .weapons .volt {
+  background-image: url("../images/Volt_Icon.png");
+}
+.player .weapons .wingman {
+  background-image: url("../images/Wingman_Icon.png");
 }
